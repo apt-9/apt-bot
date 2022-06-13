@@ -22,7 +22,9 @@ return;
     const avatarEmbed = new Discord.MessageEmbed()
         .setColor(color)
         .setTitle(`Voici la photo de profile de ${user.tag}`)
-        .setImage(`${user.avatarURL({  dynamic: true })}`);
+        .setImage(`${user.avatarURL({
+            size: 1024
+        })}`);
     message.channel.send(avatarEmbed).catch(err => { });
 }
     }
